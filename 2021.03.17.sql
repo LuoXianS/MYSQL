@@ -62,7 +62,7 @@ select * from  students;
 insert into students values(1,100,'bit','2320@qq.com');
 insert into students values(2,101,'bit2','23202@qq.com');
 -- 指定列多行插入
-insert into stud ents (id,sn,name) values
+insert into students (id,sn,name) values
 (3,102,'bit3'),
 (4,103,'bit4');
  -- 删除数据
@@ -74,3 +74,5 @@ select id,name form stu_tese;
 select id, name,math+chinese+english as zongfen form  grades;
 -- 起别名
     as bieming;
+	
+	insert into teachers  name values('张三');
