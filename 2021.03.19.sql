@@ -24,3 +24,7 @@ drop table if exists books;
 create table null(
 name varchar(10)
 );
+update books set price = price+50 where save > 
+select * from user where ID between 1 and 200 or ID between 300 and 500 and account is not null;
+
+select * from books where author is not null or price > 50 and publish_data >2019;
