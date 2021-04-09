@@ -83,3 +83,21 @@ select(select distinct salary SecondHighestSalary from employee order by desc li
 
 
 
+
+--1. 新增貂蝉同学的借阅记录：诗经，从2019年9月25日17:50到2019年10月25日17:50
+insert into  borrow_info VALUES (19, 3, 10, '2019-9-25 17:50:00', '2019-10-25 17:50:00');
+
+--2. 查询计算机分类下的图书借阅信息
+select 	b.* from  borrow_info b,book,category c
+where b.book_id =  book_id
+where c.id = book.category_id
+group  by c.name 
+having c.name = '计算机'
+
+--3. 修改图书《深入理解Java虚拟机》的价格为61.20
+update book set price = 61.20 where name = '《深入理解Java虚拟机》'
+
+--4. 删除id最大的一条借阅记录
+drop * from borrow_info order by desc limit 1;
+
+
